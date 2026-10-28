@@ -49,7 +49,7 @@ jobs:
           ref: ${{ github.event_name == 'release' && github.ref || inputs.environment == 'master' && 'refs/heads/master' || inputs.environment == 'staging' && 'refs/heads/staging' || github.ref }}
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
 
       - name: Setup environment variables
         run: |
